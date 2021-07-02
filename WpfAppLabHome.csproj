@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Paint.ico" />
+    <None Remove="UKFlag.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Paint.ico" />
+    <Resource Include="UKFlag.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Flags.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Flags.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\StringsE.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StringsE.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\StringsPl.pl.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StringsPl.pl.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Flags.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Flags.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\StringsE.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringsE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\StringsPl.pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringsPl.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
